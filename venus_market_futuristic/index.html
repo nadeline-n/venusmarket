@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venu's Market</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Loading Page -->
+  <div id="loading-page">
+    <button id="skip-btn" onclick="hideLoading()">⨉ Skip</button>
+    <h1>Venu's Market</h1>
+    <p>Memulai pengalaman gaming terbaik...</p>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content" style="display:none;">
+    <header>
+      <h1>Venu's Market</h1>
+      <p>Pusat top-up diamond ML dan jasa joki terpercaya!</p>
+    </header>
+
+    <section class="intro">
+      <h2>Kenapa Pilih Venu's Market?</h2>
+      <p>
+        Venu's Market adalah solusi terbaik untuk para pemain Mobile Legends
+        yang ingin top-up diamond dengan harga bersahabat dan jasa joki dari
+        rank Legend hingga Mythic Immortal dengan pelayanan cepat, aman, dan
+        profesional.
+      </p>
+    </section>
+
+    <section class="services">
+      <h2 onclick="toggleList('diamond')">💎 Daftar Harga Diamond</h2>
+      <ul id="diamond" class="hidden">
+        <li>5 Diamond - Rp1.500</li>
+        <li>50 Diamond - Rp15.000</li>
+        <li>100 Diamond - Rp28.000</li>
+        <li>250 Diamond - Rp65.000</li>
+        <li>500 Diamond - Rp125.000</li>
+        <li>1000 Diamond - Rp240.000</li>
+      </ul>
+
+      <h2 onclick="toggleList('joki')">🎮 Harga Jasa Joki Rank</h2>
+      <ul id="joki" class="hidden">
+        <li>Legend ke Mythic - Rp50.000</li>
+        <li>Mythic ke Mythic Glory - Rp75.000</li>
+        <li>Mythic Glory ke Mythic Immortal - Rp100.000</li>
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h2>Hubungi Kami</h2>
+      <p>Order sekarang via WhatsApp: <a href="https://wa.me/6281234567890">+62 812-3456-7890</a></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Venu's Market. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        hideLoading();
+      }, 3000);
+    });
+
+    function toggleList(id) {
+      document.getElementById(id).classList.toggle('hidden');
+    }
+
+    function hideLoading() {
+      document.getElementById('loading-page').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
